@@ -1,6 +1,7 @@
 package vn.mobifone.thonguyen.messenger.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +33,7 @@ public class MessageServices {
 	
 	public Message addMessage(Message message) {
 		message.setId(messages.size() + 1);
+		message.setCreated(new Date());
 		messages.put(message.getId(), message);
 		return message;
 	}
